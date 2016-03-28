@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import me.tekkitcommando.jc2.servers.ServerList;
+import ro.fortsoft.pf4j.DefaultPluginManager;
+import ro.fortsoft.pf4j.PluginManager;
 
 /**
  *
@@ -27,6 +29,7 @@ public class JC2 {
     static IDManager idManager = new IDManager();
     static ServerList serverList = new ServerList();
     static List<JC2> appsList = new ArrayList();
+    static PluginManager pluginManager = new DefaultPluginManager();
 
     public static void main(String[] args) {
 
@@ -41,10 +44,12 @@ public class JC2 {
         //Initialize main loop
         boolean runLoop;
         runLoop = true;
-
+        pluginManager.loadPlugins();
+        pluginManager.startPlugins();
+        
         Scanner scanner = new Scanner(System.in);
         String currentCommand;
-    
+
         System.out.println("Info: Type /info to get the build version!");
         System.out.println("Info: Type /help to get a list of availble commands!");
 
