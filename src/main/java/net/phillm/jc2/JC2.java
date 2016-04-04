@@ -21,7 +21,7 @@ public class JC2 {
     // Specifies Version
     final static String version = "1.0.0 - SNAPSHOT";
     // Specifies Website
-    final static String website = "phillm.net";
+    final static String website = "https://github.com/phillmac";
     // Specifies Github Repo
     final static String github = "https://github.com/phillmac/javaconsole";
 
