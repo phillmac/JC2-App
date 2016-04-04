@@ -33,8 +33,6 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
                             <mainClass>net.phillm.jc2.JC2</mainClass>
                         </manifest>
                     </archive>
