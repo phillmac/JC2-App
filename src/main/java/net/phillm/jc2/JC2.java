@@ -67,6 +67,7 @@ public class JC2 {
                 System.out.println("/Website: Gives The Developers Website");
                 System.out.println("/Help: Lists Available Commands");
                 System.out.println("/Stop | /quit | /exit | /close: Close the console");
+                System.out.println("/Plugins: Lists Plugins");
 
             } else if (currentCommand.contains("/stop") || currentCommand.contains("/quit") || currentCommand.contains("/exit") || currentCommand.contains("/close")) {
                 System.out.println("Stopping");
