@@ -75,7 +75,7 @@ public class JC2 {
             } else if (currentCommand.contains("/plugins") || currentCommand.contains("/pl")) {
                 List<PluginWrapper> startedPlugins = pluginManager.getStartedPlugins();
                 
-                System.out.println("Available Plugins: "+pluginManager.getExtensionClassNames(null).toString());
+                //System.out.println("Available Plugins: "+pluginManager.getExtensionClassNames(null).toString());
                 
                 for (PluginWrapper plugin : startedPlugins) {
                     String pluginId = plugin.getDescriptor().getPluginId();
