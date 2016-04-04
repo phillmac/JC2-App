@@ -53,7 +53,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>net.phillm.jc2.JC</mainClass>
+                            <mainClass>net.phillm.jc2.JC2</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
