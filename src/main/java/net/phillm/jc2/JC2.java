@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 import ro.fortsoft.pf4j.DefaultPluginManager;
 import ro.fortsoft.pf4j.PluginManager;
+import ro.fortsoft.pf4j.PluginWrapper;
 
 /**
  *
@@ -43,7 +44,7 @@ public class JC2 {
         runLoop = true;
         pluginManager.loadPlugins();
         pluginManager.startPlugins();
-        
+
         Scanner scanner = new Scanner(System.in);
         String currentCommand;
 
@@ -70,8 +71,21 @@ public class JC2 {
             } else if (currentCommand.contains("/stop") || currentCommand.contains("/quit") || currentCommand.contains("/exit") || currentCommand.contains("/close")) {
                 System.out.println("Stopping");
                 runLoop = false;
+            } else if (currentCommand.contains("/plugins") || currentCommand.contains("/pl")) {
+                List<PluginWrapper> startedPlugins = pluginManager.getStartedPlugins();
+                
+                System.out.println("Available Plugins: "+pluginManager.getExtensionClassNames(null).toString());
+                
+                for (PluginWrapper plugin : startedPlugins) {
+                    String pluginId = plugin.getDescriptor().getPluginId();
+                    System.out.println(String.format("Extensions added by plugin '%s':", pluginId));
+                    for (String extension : pluginManager.getExtensionClassNames(pluginId)) {
+                        System.out.println("   " + extension);
+                    }
+                }
 
             }
+
         }
     }
 }
