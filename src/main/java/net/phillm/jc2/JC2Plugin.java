@@ -5,10 +5,17 @@
  */
 package net.phillm.jc2;
 
+import ro.fortsoft.pf4j.Plugin;
+import ro.fortsoft.pf4j.PluginWrapper;
+
 /**
  *
  * @author Phillip
  */
-public abstract class JC2Plugin implements API.PluginAPI {
+public abstract class JC2Plugin extends Plugin implements API.PluginAPI{
+
+    public JC2Plugin(PluginWrapper wrapper) {
+        super(wrapper);
+    }
     
 }
