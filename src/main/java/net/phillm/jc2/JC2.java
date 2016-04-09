@@ -74,16 +74,22 @@ public class JC2 {
                 runLoop = false;
             } else if (currentCommand.contains("/plugins") || currentCommand.contains("/pl")) {
                 List<PluginWrapper> startedPlugins = pluginManager.getStartedPlugins();
+                List<PluginWrapper> availablePlugins = pluginManager.getPlugins();
+                System.out.println("Available Plugins:");
                 
-                //System.out.println("Available Plugins: "+pluginManager.getExtensionClassNames(null).toString());
-                
-                for (PluginWrapper plugin : startedPlugins) {
+                for (PluginWrapper plugin : availablePlugins) {
                     String pluginId = plugin.getDescriptor().getPluginId();
-                    System.out.println(String.format("Extensions added by plugin '%s':", pluginId));
-                    for (String extension : pluginManager.getExtensionClassNames(pluginId)) {
-                        System.out.println("   " + extension);
-                    }
+                    String pluginStatus = plugin.getPluginState().toString();
+                    System.out.println(String.format("Name: '%s' Status: '%s'", pluginId, pluginStatus));
                 }
+                
+                //for (PluginWrapper plugin : startedPlugins) {
+                //    String pluginId = plugin.getDescriptor().getPluginId();
+                //    System.out.println(String.format("Extensions added by plugin '%s':", pluginId));
+                //    for (String extension : pluginManager.getExtensionClassNames(pluginId)) {
+                //        System.out.println("   " + extension);
+                 //   }
+                //}
 
             }
 
