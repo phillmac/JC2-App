@@ -19,7 +19,8 @@ abstract public class API {
     }
         public interface PluginAPI extends ExtensionPoint {
     public String getVersion();
-   // public Boolean init();
+    //public Boolean init();
+    //public Boolean shutdown();
         
         
     }
