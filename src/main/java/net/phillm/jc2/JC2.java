@@ -31,6 +31,8 @@ public class JC2 {
     static PluginManager pluginManager = new DefaultPluginManager();
 
     public static void main(String[] args) {
+        
+        System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "WARN");
 
         JC2 mainApp;
         mainApp = new JC2();
