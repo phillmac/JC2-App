@@ -60,7 +60,7 @@ public class JC2 {
                 System.out.println("Website: " + website);
                 System.out.println("View on Github: " + github);
 
-            } else if (currentCommand.startsWith("website") || currentCommand.contains("site")) {
+            } else if (currentCommand.startsWith("website") || currentCommand.startsWith("site")) {
                 System.out.println("Website: " + website);
 
             } else if (currentCommand.startsWith("help")) {
