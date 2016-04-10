@@ -72,6 +72,7 @@ public class JC2 {
 
             } else if (currentCommand.startsWith("stop") || currentCommand.startsWith("quit") || currentCommand.startsWith("exit") || currentCommand.startsWith("close")) {
                 System.out.println("Stopping");
+                pluginManager.stopPlugins();
                 runLoop = false;
             } else if (currentCommand.startsWith("plugins") || currentCommand.startsWith("pl")) {
                 List<PluginWrapper> startedPlugins = pluginManager.getStartedPlugins();
