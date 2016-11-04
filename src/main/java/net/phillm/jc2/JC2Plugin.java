@@ -17,5 +17,5 @@ public abstract class JC2Plugin extends Plugin implements API.PluginAPI{
     public JC2Plugin(PluginWrapper wrapper) {
         super(wrapper);
     }
-    
+    abstract public boolean extractConfig() ;
 }
